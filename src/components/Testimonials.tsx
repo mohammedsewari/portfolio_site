@@ -7,7 +7,7 @@ export const Testimonials = () => {
   const { t } = useAppContext();
 
   return (
-    <section className="py-32 px-6 md:px-12 bg-white/[0.02]">
+    <section className="py-32 px-6 md:px-12 bg-foreground/[0.02]">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-16 text-center">
           {t.testimonials.title}
@@ -20,7 +20,7 @@ export const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="p-10 border border-white/5 rounded-3xl bg-background relative overflow-hidden"
+              className="p-10 border border-foreground/10 rounded-3xl bg-background relative overflow-hidden"
             >
               <div className="absolute top-6 right-8 text-accent/10">
                 <Quote size={80} />

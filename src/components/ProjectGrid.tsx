@@ -30,7 +30,7 @@ export const ProjectGrid = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <div className="group block h-full p-8 bg-white/5 border border-white/10 rounded-3xl transition-all hover:bg-white/10 hover:border-accent/50 hover:shadow-[0_0_30px_rgba(225,177,44,0.1)] relative overflow-hidden">
+            <div className="group block h-full p-8 bg-foreground/[0.05] border border-foreground/15 rounded-3xl transition-all hover:bg-foreground/[0.08] hover:border-accent/50 hover:shadow-[0_0_30px_rgba(225,177,44,0.1)] relative overflow-hidden">
               <div className="flex justify-between items-start mb-6">
                 <div className="p-3 bg-accent/10 rounded-xl text-accent">
                   <Code size={24} />
@@ -51,7 +51,7 @@ export const ProjectGrid = () => {
 
               <div className="flex flex-wrap gap-2 mb-8">
                 {project.techStack.map(tech => (
-                  <span key={tech} className="text-[10px] font-mono text-foreground/40 bg-white/5 px-2 py-1 rounded border border-white/5">
+                  <span key={tech} className="text-[10px] font-mono text-foreground/40 bg-foreground/[0.05] px-2 py-1 rounded border border-foreground/10">
                     {tech}
                   </span>
                 ))}
