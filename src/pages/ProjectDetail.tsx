@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, Code, CheckCircle } from 'lucide-react';
 import { projects } from '../data/content';
 import { CTA } from '../components/Footer';
 import { useAppContext } from '../context/AppContext';
+import { ProjectScreenshots } from '../components/ProjectScreenshots';
 
 export const ProjectDetail = () => {
   const { slug } = useParams();
@@ -71,7 +72,7 @@ export const ProjectDetail = () => {
                 {project.techStack.map((tech) => (
                   <span 
                     key={tech}
-                    className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm font-medium"
+                    className="px-4 py-2 bg-foreground/[0.05] border border-foreground/15 rounded-full text-sm font-medium"
                   >
                     {tech}
                   </span>
@@ -88,6 +89,11 @@ export const ProjectDetail = () => {
                 {project.description[language]}
               </p>
             </section>
+
+            <ProjectScreenshots
+              screenshots={project.screenshots}
+              projectTitle={project.title[language]}
+            />
           </div>
 
           <aside className="space-y-12">

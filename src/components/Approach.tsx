@@ -24,7 +24,7 @@ export const Approach = () => {
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {features.map((f, i) => (
-              <div key={i} className={`p-8 rounded-3xl border border-white/5 bg-white/[0.02] flex flex-col gap-4 ${i === 2 ? 'sm:col-span-2' : ''}`}>
+              <div key={i} className={`p-8 rounded-3xl border border-foreground/10 bg-foreground/[0.03] flex flex-col gap-4 ${i === 2 ? 'sm:col-span-2' : ''}`}>
                 <div className="text-accent">{f.icon}</div>
                 <h3 className="text-xl font-bold">{f.title}</h3>
               </div>

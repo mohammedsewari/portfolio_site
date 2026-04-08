@@ -23,23 +23,28 @@ export const CTA = () => {
             </React.Fragment>
           ))}
         </h2>
-        
+
         <div className="flex justify-center">
           <Magnetic>
-            <button className="bg-accent hover:bg-accent/90 text-background px-12 py-6 rounded-full text-xl font-bold transition-all hover:scale-105 active:scale-95 shadow-[0_0_50px_rgba(225,177,44,0.3)]">
+            <a
+              href="https://www.linkedin.com/in/mohammedsewari/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-accent hover:bg-accent/90 text-background px-12 py-6 rounded-full text-xl font-bold transition-all hover:scale-105 active:scale-95 shadow-[0_0_50px_rgba(225,177,44,0.3)]"
+            >
               {t.nav.contact}
-            </button>
+            </a>
           </Magnetic>
         </div>
 
         <div className="mt-24 flex flex-wrap justify-center gap-12">
-          <a href="mailto:hello@sewar.dev" className="flex items-center gap-3 text-foreground/60 hover:text-foreground transition-colors group">
+          <a href="mailto:mohammedalsewari06@gmail.com" className="flex items-center gap-3 text-foreground/60 hover:text-foreground transition-colors group">
             <Mail size={20} className="group-hover:text-accent" />
-            <span className="font-medium">hello@sewar.dev</span>
+            <span className="font-medium">mohammedalsewari06@gmail.com</span>
           </a>
           <div className="flex gap-8">
             <a href="https://github.com/MohammedSewari" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-accent transition-colors"><Github size={24} /></a>
-            <a href="https://linkedin.com/in/mohammed-al-sewari" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-accent transition-colors"><Linkedin size={24} /></a>
+            <a href="https://www.linkedin.com/in/mohammedsewari/" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-accent transition-colors"><Linkedin size={24} /></a>
           </div>
         </div>
       </motion.div>
@@ -57,7 +62,7 @@ export const Footer = () => {
           {t.footer.madeWith}
         </div>
         <div className="text-sm font-mono text-foreground/40">
-          © {new Date().getFullYear()} sewar.dev
+          © {new Date().getFullYear()} sewari.dev
         </div>
       </div>
     </footer>

@@ -7,6 +7,7 @@ export interface Project {
   description: { en: string; nl: string };
   techStack: string[];
   status: { en: string; nl: string };
+  screenshots?: string[];
 }
 
 export const projects: Project[] = [
@@ -20,6 +21,12 @@ export const projects: Project[] = [
     },
     techStack: ['React', 'Tailwind CSS', 'Framer Motion', 'TypeScript'],
     status: { en: 'Completed', nl: 'Voltooid' },
+    screenshots: [
+      '/Portfolio_Site/1.png',
+      '/Portfolio_Site/2.png',
+      '/Portfolio_Site/3.png',
+      '/Portfolio_Site/4.png',
+    ],
   },
   {
     id: '2',
@@ -31,6 +38,12 @@ export const projects: Project[] = [
     },
     techStack: ['Next.js', 'Tailwind CSS', 'Lucide Icons'],
     status: { en: 'Completed / In Development', nl: 'Voltooid / In Ontwikkeling' },
+    screenshots: [
+      '/Walat/1.png',
+      '/Walat/2.png',
+      '/Walat/3.png',
+      '/Walat/4.png',
+    ],
   },
   {
     id: '3',

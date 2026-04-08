@@ -7,7 +7,7 @@ export const About = () => {
   const { t } = useAppContext();
 
   return (
-    <section id="about" className="py-32 px-6 md:px-12 bg-white/[0.02]">
+    <section id="about" className="py-32 px-6 md:px-12 bg-foreground/[0.02]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -43,16 +43,22 @@ export const About = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative aspect-square bg-accent/20 rounded-3xl overflow-hidden flex items-center justify-center border border-white/10"
+          className="relative aspect-square bg-accent/20 rounded-3xl overflow-hidden flex items-center justify-center border border-foreground/15 group"
         >
-          <div className="text-9xl font-black text-accent/10 select-none">M</div>
-          <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-          <div className="absolute bottom-12 left-12 right-12">
+          <img 
+            src="/my_photo2.png" 
+            alt="Mohammed Al Sewari" 
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+          <div className="relative z-10 text-9xl font-black text-accent/5 select-none pointer-events-none">M</div>
+          
+          <div className="absolute bottom-12 left-12 right-12 z-20">
             <div className="flex items-center gap-2 text-accent mb-4">
               <Languages size={20} />
               <span className="text-sm font-mono uppercase tracking-widest">{t.about.languagesTitle}</span>
             </div>
-            <div className="text-xl font-bold">{t.hero.languages}</div>
+            <div className="text-xl font-bold text-white">{t.hero.languages}</div>
           </div>
         </motion.div>
       </div>
